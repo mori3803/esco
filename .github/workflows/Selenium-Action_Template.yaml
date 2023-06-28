@@ -1,5 +1,8 @@
 name: Run Selenium On GitHub Action
 on:
+  schedule:
+
+    - cron: '*/10 * * * *' # Runs every 10 m
   workflow_dispatch:
 jobs:
   scrape:
@@ -11,7 +14,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: Installing package list
+      - name: Installing package lis
         run: apt list --installed    
       - name: Removing previous chrome instances on runner 
         run: sudo apt purge google-chrome-stable  
