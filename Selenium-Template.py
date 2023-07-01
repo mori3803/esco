@@ -45,7 +45,7 @@ driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
 time.sleep(10)
-txt = find_element(By.CLASS_NAME, "text-title")
+txt = driver.find_element(By.CLASS_NAME, "text-title")
 #text = driver.find_element("class", "text-title")
 
 with open('./GitHub_Action_Results.txt', 'w') as f:
