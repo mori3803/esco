@@ -2,7 +2,7 @@ name: Run Selenium On GitHub Action
 on:
   schedule:
 
-    - cron: '*/6 * * * *' # Runs every 1 m
+    - cron: '*/5 * * * *' # Runs every 1 m
   workflow_dispatch:
 env:
   username: ${{ secrets.USERNAME }}
