@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 env:
   username: ${{ secrets.USERNAME }}
-  pssword: ${{ secrets.PASSWORD }}
+  password: ${{ secrets.PASSWORD }}
 jobs:
   scrape:
     runs-on: ubuntu-latest
