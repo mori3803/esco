@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
+from selenium.webdriver.common.by import By
 import os
 import time
 from pyvirtualdisplay import Display
@@ -44,7 +45,7 @@ driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
 time.sleep(10)
-txt = driver.find_elements_by_class_name("text-title")
+txt = find_element(By.CLASS_NAME, "text-title")
 #text = driver.find_element("class", "text-title")
 
 with open('./GitHub_Action_Results.txt', 'w') as f:
