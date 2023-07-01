@@ -43,6 +43,9 @@ driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
+time.sleep(10)
+text = driver.find_element("class", "text-title")
+driver.quit()
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"This was written with a GitHub action {driver.title}")
+    f.write(f"This was written with a GitHub action {text}")
 
