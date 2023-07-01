@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
 import os
+import time
 from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800, 800))  
 display.start()
@@ -41,6 +42,7 @@ driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 #print(driver.title)
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
+driver.find_element("id", "btnSubmit").click()
 with open('./GitHub_Action_Results.txt', 'w') as f:
     f.write(f"This was written with a GitHub action {driver.title}")
 
