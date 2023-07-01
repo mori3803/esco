@@ -4,6 +4,9 @@ on:
 
     - cron: '*/6 * * * *' # Runs every 1 m
   workflow_dispatch:
+env:
+  username: ${{ secrets.USERNAME }}
+  pssword: ${{ secrets.PASSWORD }}
 jobs:
   scrape:
     runs-on: ubuntu-latest
