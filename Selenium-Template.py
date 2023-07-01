@@ -48,5 +48,5 @@ txt = driver.find_elements_by_class_name("text-title")
 #text = driver.find_element("class", "text-title")
 driver.quit()
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"This was written with a GitHub action {txt.text()}")
+    f.write(f"This was written with a GitHub action {txt.text}")
 
