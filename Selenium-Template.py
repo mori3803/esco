@@ -45,10 +45,11 @@ driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
 time.sleep(10)
-txt = driver.find_element(By.CLASS_NAME, "text-title")
+
 #text = driver.find_element("class", "text-title")
 driver.find_element(By.XPATH , '//a | //*[contains(concat( " ", @class, " " ), concat( " ", "title", " " ))]').click()
 time.sleep(10)
+txt = driver.find_element(By.CLASS_NAME, "text-title")
 with open('./GitHub_Action_Results.txt', 'w') as f:
     f.write(f"This was written with a GitHub action {txt.text}")
 driver.quit()
