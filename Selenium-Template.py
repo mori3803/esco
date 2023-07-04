@@ -22,7 +22,7 @@ options = [
   # Define window size here
    "--window-size=1200,1200",
     "--ignore-certificate-errors",
-    "--add_experimental_option--"
+    "--add_experimental_option"
  
     #"--headless",
     #"--disable-gpu",
