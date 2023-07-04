@@ -46,6 +46,15 @@ driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
 time.sleep(10)
 
+f3 = driver.find_elements(By.CLASS_NAME,'favmenu-item-inner-wrapper')
+f3[1].click()
+#f.send_keys(Keys.RETURN)
+time.sleep(10)
+foods = driver.find_elements(By.CLASS_NAME,'food-name')
+for food in foods : 
+    print(food.text)
+
+
 #text = driver.find_element("class", "text-title")
 #driver.find_element(By.XPATH , '//a | //*[contains(concat( " ", @class, " " ), concat( " ", "title", " " ))]').click()
 #time.sleep(10)
