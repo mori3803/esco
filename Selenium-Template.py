@@ -21,7 +21,8 @@ chrome_options = webdriver.ChromeOptions()
 options = [
   # Define window size here
    "--window-size=1200,1200",
-    "--ignore-certificate-errors"
+    "--ignore-certificate-errors",
+    "--add_experimental_option--"
  
     #"--headless",
     #"--disable-gpu",
